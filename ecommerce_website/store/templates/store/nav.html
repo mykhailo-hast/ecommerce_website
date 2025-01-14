@@ -9,27 +9,35 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="/">Головна</a></li>
-            <li><a href="/products/">Продукти</a></li>
-            <li><a href="/about/">Про нас</a></li>
-            <li><a href="/contact/">Контакти</a></li>
-        </ul>
+    <nav class="nav">
+        <div class="container">
+            <ul>
+                <li><a href="/">Головна</a></li>
+                <li><a href="/products/">Продукти</a></li>
+                <li><a href="/about/">Про нас</a></li>
+                <li><a href="/contact/">Контакти</a></li>
+            </ul>
+        </div>
     </nav>
 
     <nav class="search-nav">
-        <form action="/search/" method="get">
-            <input type="text" name="q" placeholder="Пошук..." required>
-            <button type="submit">Пошук</button>
-            <a href="/catalog/" class="button">Каталог</a>
-        </form>
+        <div class="container">
+            <form action="/search/" method="get">
+                <input type="text" name="q" placeholder="Пошук..." required>
+                <button type="submit">Пошук</button>
+            </form>
+    <!--        <div class="icon-buttons">-->
+                    <button><a href="/products/">Каталог</a></button>
+                    <button><img src="static/images/account.png" alt="Account" width="48" height="48"></button>
+                    <button><img src="static/images/basket.png" alt="Basket" width="48" height="48"></button>
+        </div>
+<!--        </div>-->
     </nav>
 
     {% block content %}
     {% endblock content %}
 
-    <footer>
+    <footer class="footer">
         <ul>
             <li><a href="/">Головна</a></li>
             <li><a href="/products/">Продукти</a></li>
@@ -37,5 +45,7 @@
             <li><a href="/contact/">Контакти</a></li>
         </ul>
     </footer>
+
 </body>
+
 </html>
